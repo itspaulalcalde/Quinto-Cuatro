@@ -5,19 +5,29 @@
 nav {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    padding: 50px 0 50px;
+
+
+    position: relative;
+    z-index: 20;
 }
 
 nav ul {
     display: flex;
     gap: 40px;
     list-style: none;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
     font-family: "Sometype Mono", monospace;
     font-size: 16px;
+    border: 1px solid white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-block;
+
 }
 
 
@@ -36,17 +46,6 @@ h1 {
     margin: 0;
 }
 
-h2 {
-    color: white;
-}
-
-h3 {
-    color: white;
-}
-
-p {
-    color: white;
-}
 
 
 /*BASE*/
@@ -57,6 +56,7 @@ html {
 
 body {
     background-color: black;
+    margin: 0;
 }
 
 
@@ -69,11 +69,11 @@ nav {
 header {
     min-height: 100vh;
     position: relative;
-    padding: 80px 0 120px 0;
+    padding: 20px 0 40px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 80px;
+    gap: 30px;
 }
 
 
@@ -87,7 +87,7 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: -80px;
+    margin-top: 0px;
 }
 
 .hero-text {
@@ -108,38 +108,13 @@ header {
     left: 25%;
 }
 
-.welcome {
-    font-family: "Instrument Serif", serif;
-    font-size: 30px;
-    position: absolute;
-    top: -25px;
-    left: 360px;
-    color: white;
-}
+
 
 .title {
     position: absolute;
     top: 30px;
     left: 15%;
     font-size: 100px;
-}
-
-.name {
-    font-family: "Instrument Serif", serif;
-    font-size: 30px;
-    position: absolute;
-    top: 150px;
-    right: 365px;
-    color: white;
-}
-
-.job {
-    font-family: "Instrument Serif", serif;
-    position: absolute;
-    top: 280px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
 }
 
 .home-about-row {
@@ -245,10 +220,10 @@ header {
 /*ROOMS*/
 
 #rooms {
-    padding: 80px 0;
+    padding: 10px 0 0 0;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 5px;
     margin-top: 0;
 }
 
@@ -329,9 +304,72 @@ margin-left: auto;
     font-size: 90px;
 }
 
-#Gallery p {
-    font-family: "Instrument Serif", serif ;
+.gallery-header {
+    padding: 30px 0 0 0    ;
 }
+
+.info {
+    min-height: 100vh;
+    padding: 30px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/*ABOUT*/
+
+/*Gallery*/
+
+#gallery {
+    padding: 20px 0 80px 0;
+}
+
+#gallery > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#gallery > ul > li {
+    /* width: 33.333%; */
+    flex: 30%;
+}
+
+
+#masonry {
+    padding: 20px 0 80px 0;
+}
+
+#masonry > h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#masonry > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#masonry > ul > li {
+    height: 25vh;
+    flex-grow: 1;
+}
+
+#masonry > ul > li > img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+
 
 
 /*FOOTER*/
@@ -341,19 +379,87 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    flex-wrap: wrap;
+    
 }
 
-footer .social-icons {
+footer > .social-icons {
     display: flex;
     gap: 20px;
 }
 
-footer .social-icons a {
+footer > .social-icons a {
     color: white;
     font-size: 20px;
 }
 
-footer > p {
+footer > .copyright {
     color: white;
 }
+
+
+
+/*HOVER*/
+nav > ul > li > a:hover {
+    color: red;
+}
+
+nav > a:hover {
+    color: red;
+    border: 1px red;
+}
+
+
+
+/* MEDIA QUERIES */
+/* Phone */
+@media screen and (max-width: 480px) {
+    
+    .wrapper {
+        padding: 0 10px;
+    }
+
+    header > div:last-child {
+        display: none;
+    }
+
+    #gallery > ul > li {
+        flex: 100%;
+    }
+
+}
+
+/* iPad */
+@media screen and (max-width: 720px) {
+
+    .wrapper {
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    #projects > .pro-row {
+        flex-wrap: wrap;
+    }
+
+    #projects > .pro-row > .col {
+        width: 100%;
+    }
+
+    #gallery > ul > li {
+        flex: 45%;
+    }
+
+    footer > .f-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer > .f-row > .copyright {
+        padding-top: 40px;
+        text-align: center;
+    }
+
+}
+
