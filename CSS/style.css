@@ -20,7 +20,7 @@ body {
 }
 
 
-/*MENU*/
+/*MENÚ*/
 
 nav {
     justify-content: center;
@@ -51,41 +51,34 @@ nav  a {
 
 }
 
-/*[hovering]*/
+/*[hovering botones]*/
 nav > ul > li > a:hover {
     background-color: white;
     color: black;
 }
 
 
-/*HEADER*/
+/*HOME*/
+/*Header*/
 
 header {
-    padding: 80px 0;
+    padding: 20px 0;
     display: flex;
+    align-items: center;
     justify-content: center;
-
-
-    min-height: 100vh;
+    min-height: auto;
     position: relative;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
+    padding: 0;
 }
-
-header > div:first-child {
-    display: flex;
-    justify-content: center;
-    gap: 28px
-}
-
-
 
 .hero {
     height: 100vh;
     background-image: url("../HTML/img/home/quintocuatro.jpeg");
     background-repeat: no-repeat;
-    background-position: center 5%;
-    background-size: 45%;
+    background-position: center;
+    background-size: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,80 +86,67 @@ header > div:first-child {
     margin-top: 0px;
 }
 
-.hero-text {
+.hero > div:last-child {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    width: 100%;
-    min-height: 400px;
-    margin-top: 10px;
 }
 
-.hero-text > h1 {
+
+/*[header - tipo]*/
+.hero > div:last-child h1 {
     font-family: "Imperial Script", cursive;
     font-size: 160px;
     line-height: 1;
     color: white;
     text-align: center;
     white-space: nowrap;
-    margin: 0;
-    left: 25%;
-}
-
-
-
-.title {
     position: absolute;
-    top: 30px;
-    left: 15%;
-    font-size: 100px;
-}
-
-.home-about-row{
-    margin-top: 80px;
+    top: 50%;
+    left: 50%;
 }
 
 
-
-/*ABOUT ME*/
-
+/*Welcome*/
 .home-about-row {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 80px;
     flex-wrap: wrap;
+    margin-top: 80px;
+    margin-bottom: 250px;
+    
 }
-
-.about-img {
+.about-image {
     position: relative;
-    width: 420px;
+    width: 400px;
 }
 
-.about-img > img {
+
+/*[welcome - imagen]*/
+.home-about-row > div:first-child img {
     width: 100%;
-    border-radius: 20px;
-    display: block;
+    height: auto;
+    border-radius: 20px; 
 }
 
-.about-img > h2 {
-    font-family: "Imperial Script", cursive;
-    font-size: 50px;
-    line-height: 1;
-    color: white;
-    position: absolute;
-    right: -40px;
-    bottom: -60px;
-}
-
-.about-text {
+/*[welcome - texto*/
+.home-about-row > div:last-child p {
     font-family: "Instrument Serif", serif;
-    width: 420px;
-}
-
-.about-text > p {
+    width: 400px;
     font-size: 25px;
     line-height: 1.4;
     color: white;
 }
+
+
+
+
+
+
 
 
 
@@ -225,6 +205,7 @@ header > div:first-child {
 
 
 /*ROOMS*/
+
 
 #rooms {
     padding: 10px 0 0 0;
@@ -304,50 +285,40 @@ margin-left: auto;
 }
 
 
-/*ABOUT*/
-
-#Gallery h1 {
-    font-family: "Imperial Script", cursive;
-    font-size: 90px;
-}
-
-.gallery-header {
-    padding: 30px 0 0 0    ;
-}
-
-.info {
-    min-height: 100vh;
-    padding: 30px 0 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
 
 
 
 /*ABOUT*/
-
 /*Gallery*/
 
-#gallery {
-    padding: 20px 0 80px 0;
+/*[título]*/
+#Gallery  h1 {
+    font-family: "Imperial Script", cursive;
+    font-size: 90px;
+    color: white;
 }
 
-#gallery > ul {
+/*[galería 1]*/
+
+#gallery ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 5px;
+    justify-content: center;
 }
 
-#gallery > ul > li {
-    /* width: 33.333%; */
-    flex: 30%;
+#gallery  li{
+    width: 30%;
+}
+
+#gallery img {
+    width: 60%;
+    display: block;
 }
 
 
+/*[galería 2]*/
 #masonry {
     padding: 20px 0 80px 0;
 }
@@ -388,6 +359,9 @@ margin-left: auto;
 
 
 
+
+
+
 /*FOOTER*/
 footer {
     margin: 80px 0 40px 0;
@@ -395,6 +369,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    margin-top: 150px;
     
 }
 
@@ -411,11 +386,6 @@ footer > .social-icons a {
 footer > .copyright {
     color: white;
 }
-
-
-
-
-
 
 
 /* MEDIA QUERIES */
