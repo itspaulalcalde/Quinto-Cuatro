@@ -61,6 +61,7 @@ nav > ul > li > a:hover {
 /*HOME*/
 /*Header*/
 
+/*[contenedor principal]*/
 header {
     padding: 20px 0;
     display: flex;
@@ -73,6 +74,7 @@ header {
     padding: 0;
 }
 
+/*[bloque pantalla inicial]*/
 .hero {
     height: 100vh;
     background-image: url("../HTML/img/home/quintocuatro.jpeg");
@@ -86,6 +88,7 @@ header {
     margin-top: 0px;
 }
 
+/*[contenedor texto h1]*/
 .hero > div:last-child {
     flex: 1;
     display: flex;
@@ -95,7 +98,7 @@ header {
 }
 
 
-/*[header - tipo]*/
+/*[posición texto h1]*/
 .hero > div:last-child h1 {
     font-family: "Imperial Script", cursive;
     font-size: 160px;
@@ -106,10 +109,12 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: (-50%, -50%);
 }
 
 
 /*Welcome*/
+/*[contenedor principal]*/
 .home-about-row {
     display: flex;
     justify-content: center;
@@ -120,11 +125,12 @@ header {
     margin-bottom: 250px;
     
 }
+
+/*[contenedor imagen]*/
 .about-image {
     position: relative;
     width: 400px;
 }
-
 
 /*[welcome - imagen]*/
 .home-about-row > div:first-child img {
@@ -296,56 +302,96 @@ margin-left: auto;
     font-family: "Imperial Script", cursive;
     font-size: 90px;
     color: white;
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 
-/*[galería 1]*/
+/*[Galería 1]*/
 
-#gallery ul {
+#gallery {
+    padding: 20px 80px;
+}
+
+#gallery > h2 {
+    font-family:"Anton", sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#gallery > ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 30px;
     justify-content: center;
 }
 
-#gallery  li{
-    width: 30%;
+#gallery > ul > li {
+    width: 300px;
 }
 
-#gallery img {
-    width: 60%;
-    display: block;
+#gallery > ul > li > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    border-radius: 10px;
 }
 
 
-/*[galería 2]*/
-#masonry {
-    padding: 20px 0 80px 0;
+/*[Galería 2]*/
+
+#visual-dump {
+    padding: 100px;
+    margin-top: 150px;
 }
 
-#masonry > h2 {
+#visual-dump > h2 {
+    font-family:"Anton", sans-serif;
     font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    color: white;
 }
 
-#masonry > ul {
+/*[filas, sepración]*/
+#visual-dump > ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 80px 40px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-#masonry > ul > li {
-    height: 25vh;
-    flex-grow: 1;
+
+
+/*[columnas]*/
+#visual-dump > ul > li {
+    flex: 0 0 28%;
+    display: flex;
+    flex-direction: column;
 }
 
-#masonry > ul > li > img {
-    max-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
+/*[ fotos 2 y 5]*/
+#visual-dump > ul > li:nth-child(2)
+#visual-dump > ul > li:nth-child(5) {
+    margin-top: 120px;
 }
+
+/*[ fotos 1, 3, 4, 6]*/
+#visual-dump > ul > li:nth-child(odd) {
+    margin-top: -40px;
+}
+
+/*[no deformación]*/
+#visual-dump > ul > li > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+
 
 
 
