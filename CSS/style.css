@@ -60,7 +60,6 @@ nav > ul > li > a:hover {
 
 /*HOME*/
 /*Header*/
-
 /*[contenedor principal]*/
 header {
     padding: 20px;
@@ -73,7 +72,6 @@ header {
     gap: 10px;
     padding: 0;
 }
-
 
 /*[bloque pantalla inicial]*/
 .hero {
@@ -98,11 +96,10 @@ header {
     position: relative;
 }
 
-
 /*[posición texto h1]*/
 .hero > div:last-child h1 {
     font-family: "Imperial Script", cursive;
-    font-size: 160px;
+    font-size: 130px;
     line-height: 1;
     color: white;
     text-align: center;
@@ -110,7 +107,7 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: (-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 
@@ -384,13 +381,9 @@ footer > .copyright {
         padding: 0 30px;
     }
     
-    h1 {
-        font-size: 40px;
+    .hero > div:last-child h1 {
+        font-size: 50px;
     }
-
-  
-
-
 
     /*[galerías]*/
    #gallery > ul > li {
@@ -415,14 +408,19 @@ footer > .copyright {
 
 /* iPhone */
 @media screen and (max-width: 480px) {
+
+    .hero {
+        background-size: 90%;
+    }
+
+    .hero > div:last-child h1 {
+        font-size: 80px;
+    }
     
     .wrapper {
         padding: 0 10px;
     }
 
-    header > div:last-child {
-        display: none;
-    }
 
 
     /*[galerías]*/
@@ -438,5 +436,4 @@ footer > .copyright {
 
 }
 
-}
 
