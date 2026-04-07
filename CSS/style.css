@@ -99,6 +99,7 @@ header {
 /*[posición texto h1]*/
 .hero > div:last-child h1 {
     font-family: "Imperial Script", cursive;
+    font-weight: 100;
     font-size: 130px;
     line-height: 1;
     color: white;
@@ -140,6 +141,7 @@ header {
 /*[welcome - texto]*/
 .home-about-row > div:last-child p {
     font-family: "Instrument Serif", serif;
+    font-weight: 100;
     width: 400px;
     font-size: 25px;
     line-height: 1.4;
@@ -217,7 +219,7 @@ header {
 .room-text {
     font-family: "Geist Mono", monospace;
     font-weight: 100;
-    width: 45%;
+    width: 70%;
     min-width: 280px;
 }
 
@@ -246,6 +248,7 @@ header {
 /*[título]*/
 #Gallery  h1 {
     font-family: "Imperial Script", cursive;
+    font-weight: 100;
     font-size: 90px;
     color: white;
     margin-top: 200px;
